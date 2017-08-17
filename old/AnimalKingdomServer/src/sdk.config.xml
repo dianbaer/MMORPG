@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<config>	
+	<!-- #####################游戏配置信息############################ -->
+	<game>
+		<gameid>GAMEONE</gameid> <!-- 游戏id -->
+		<isDebugMode>1</isDebugMode>	<!-- 是否测试模式 1：是，0：不是 -->
+		<appkey>1379821827020</appkey> <!-- billing分配给每个游戏的appkey -->
+		<appsecret>b3dbd27c191c4897bc6dd85d1fd1d8d6</appsecret> <!-- billing分配给每个游戏的appsecret -->
+		<version>1</version>
+		<areaId>001</areaId>
+		<areaName>天龙英雄传1区</areaName>		
+		
+	</game>
+	<!-- #####################Billing配置信息############################ -->
+	<billing>	
+	<!--	
+		<appkey>1379821827020</appkey>
+		<appsecret>b3dbd27c191c4897bc6dd85d1fd1d8d6</appsecret>
+		<billing_url>http://localhost:8080/s/billing</billing_url>
+		-->	
+		<!-- 测试billing 项目组要根据运行环境进行修改		-->		 
+		<test_appkey>1376036742169</test_appkey>		
+		<test_appsecret>c9c62757e3b3484f9391f09cf6cf77c5</test_appsecret>
+		<test_billing_url>http://t.changyou.com/billing</test_billing_url>
+		
+		<billing_verify_url></billing_verify_url>
+		<billing_req_tag>0xff</billing_req_tag><!-- 用于billing回传的业务id,对于同步请求 -->
+		<billing_op_finish>2009</billing_op_finish>
+		<billing_op_verify>2008</billing_op_verify>
+		<billing_op_productlist>1006</billing_op_productlist>
+		<billing_op_login>1000</billing_op_login>
+		<billing_http_connect_time>3000</billing_http_connect_time>
+		<billing_http_read_time>30000</billing_http_read_time>		
+		
+	</billing>
+	<!-- #####################渠道配置信息############################ -->
+	<channel>
+		<dk><!-- 多酷 -->
+			<channelid>3007</channelid>
+			<channelname>duoku</channelname>
+			<appid>1720</appid>
+			<appkey>90ac530e01cf00bb01910b9800ea1d0b</appkey>
+			<appsecret>0107fe312137095d6c9009e6c6f39749</appsecret>
+		</dk>	
+		<cyou><!-- CYou渠道配置  -->
+			<channelid>3001</channelid>
+			<channelname>cyou</channelname>
+			<appid>1720</appid>
+			<appkey>90ac530e01cf00bb01910b9800ea1d0b</appkey>
+			<appsecret>0107fe312137095d6c9009e6c6f39749</appsecret>
+		</cyou>
+        <anzhi><!-- 安智渠道配置  -->
+            <channelid>3010</channelid>
+            <channelname>anzhi</channelname>
+            <appid>0</appid>
+            <appkey>1384486423QaVuwG5UUIjT6Q7tCKPc</appkey>
+            <appsecret>5ye958I6SJRkjwL7EDj4SdEi</appsecret>
+        </anzhi>
+        <jiuyi><!-- 九一渠道配置  -->
+            <channelid>3006</channelid>
+            <channelname>jiuyi</channelname>
+            <appid>101742</appid>
+            <appkey>b6aabfde073e4facc4c3dfd946267a3b6cfd93665f3c7b0e</appkey>
+            <appsecret>0</appsecret>
+        </jiuyi>
+        <oppo><!-- op渠道配置  -->
+            <channelid>3011</channelid>
+            <channelname>oppo</channelname>
+            <appid>1720</appid>
+            <appkey>90ac530e01cf00bb01910b9800ea1d0b</appkey>
+            <appsecret>0107fe312137095d6c9009e6c6f39749</appsecret>
+        </oppo>
+        <qihu><!-- 奇虎渠道配置  -->
+            <channelid>3005</channelid>
+            <channelname>qihu</channelname>
+            <appid>201066131</appid>
+            <appkey>d6ebebdfe57279996cf0bfa2f7e91699</appkey>
+            <appsecret>97ff5a757bd82a777e3fb195c984a396</appsecret>
+        </qihu>
+        <uc><!-- UC渠道配置  -->
+            <channelid>3002</channelid>
+            <channelname>UC</channelname>
+            <gameId>529260</gameId>
+            <channelIdUC>529260</channelIdUC>
+            <serverId>529260</serverId>
+            <appid>529260</appid>
+            <appkey>314ef85982ed3f85f9a18ffe25f16ebe</appkey>
+            <appsecret>0</appsecret>
+        </uc>
+        <wd><!-- 豌豆渠道配置  -->
+            <channelid>3008</channelid>
+            <channelname>wandoujia</channelname>
+            <appid>0</appid>
+            <appkey>100000485</appkey>
+            <appsecret>ce7bd6792cf2bf97158d218291e303c6</appsecret>
+        </wd>
+        <xiaomi><!-- 小米渠道配置  -->
+            <channelid>3004</channelid>
+            <channelname>xiaomi</channelname>
+            <appid>21116</appid>
+            <appkey>a05bb69a-b702-c80a-acca-527a0268540b</appkey>
+            <appsecret>0107fe312137095d6c9009e6c6f39749</appsecret>
+        </xiaomi>
+    </channel>
+</config>

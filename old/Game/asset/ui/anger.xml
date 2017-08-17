@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:7abaa547cbee23433aee8d37d0543183$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="anger.png" width="1024" height="1024">
+    <sprite n="image 1.png" x="614" y="2" w="151" h="151" oX="32" oY="32" oW="215" oH="215"/>
+    <sprite n="image 11.png" x="461" y="2" w="151" h="151" oX="32" oY="32" oW="215" oH="215"/>
+    <sprite n="image 13.png" x="308" y="2" w="151" h="151" oX="32" oY="32" oW="215" oH="215"/>
+    <sprite n="image 15.png" x="155" y="2" w="151" h="151" oX="32" oY="32" oW="215" oH="215"/>
+    <sprite n="image 17.png" x="2" y="767" w="151" h="151" oX="32" oY="32" oW="215" oH="215"/>
+    <sprite n="image 19.png" x="2" y="614" w="151" h="151" oX="32" oY="32" oW="215" oH="215"/>
+    <sprite n="image 3.png" x="2" y="461" w="151" h="151" oX="32" oY="32" oW="215" oH="215"/>
+    <sprite n="image 5.png" x="2" y="308" w="151" h="151" oX="32" oY="32" oW="215" oH="215"/>
+    <sprite n="image 7.png" x="2" y="155" w="151" h="151" oX="32" oY="32" oW="215" oH="215"/>
+    <sprite n="image 9.png" x="2" y="2" w="151" h="151" oX="32" oY="32" oW="215" oH="215"/>
+    <sprite n="jlkj/image 1.png" x="799" y="638" w="130" h="122"/>
+    <sprite n="jlkj/image 11.png" x="667" y="622" w="130" h="122"/>
+    <sprite n="jlkj/image 13.png" x="535" y="527" w="130" h="122"/>
+    <sprite n="jlkj/image 15.png" x="403" y="527" w="130" h="122"/>
+    <sprite n="jlkj/image 17.png" x="279" y="770" w="122" h="130" r="y"/>
+    <sprite n="jlkj/image 19.png" x="279" y="638" w="122" h="130" r="y"/>
+    <sprite n="jlkj/image 21.png" x="807" y="514" w="130" h="122"/>
+    <sprite n="jlkj/image 23.png" x="675" y="498" w="130" h="122"/>
+    <sprite n="jlkj/image 25.png" x="543" y="403" w="130" h="122"/>
+    <sprite n="jlkj/image 27.png" x="411" y="403" w="130" h="122"/>
+    <sprite n="jlkj/image 29.png" x="279" y="403" w="130" h="122"/>
+    <sprite n="jlkj/image 3.png" x="155" y="778" w="122" h="130" r="y"/>
+    <sprite n="jlkj/image 31.png" x="155" y="646" w="122" h="130" r="y"/>
+    <sprite n="jlkj/image 33.png" x="155" y="514" w="122" h="130" r="y"/>
+    <sprite n="jlkj/image 35.png" x="815" y="390" w="130" h="122"/>
+    <sprite n="jlkj/image 37.png" x="683" y="374" w="130" h="122"/>
+    <sprite n="jlkj/image 39.png" x="551" y="279" w="130" h="122"/>
+    <sprite n="jlkj/image 41.png" x="419" y="279" w="130" h="122"/>
+    <sprite n="jlkj/image 43.png" x="287" y="279" w="130" h="122"/>
+    <sprite n="jlkj/image 45.png" x="155" y="279" w="130" h="122"/>
+    <sprite n="jlkj/image 47.png" x="815" y="266" w="130" h="122"/>
+    <sprite n="jlkj/image 49.png" x="683" y="250" w="130" h="122"/>
+    <sprite n="jlkj/image 5.png" x="551" y="155" w="130" h="122"/>
+    <sprite n="jlkj/image 51.png" x="419" y="155" w="130" h="122"/>
+    <sprite n="jlkj/image 53.png" x="287" y="155" w="130" h="122"/>
+    <sprite n="jlkj/image 55.png" x="155" y="155" w="130" h="122"/>
+    <sprite n="jlkj/image 57.png" x="899" y="134" w="122" h="130" r="y"/>
+    <sprite n="jlkj/image 59.png" x="767" y="126" w="130" h="122"/>
+    <sprite n="jlkj/image 7.png" x="899" y="2" w="122" h="130" r="y"/>
+    <sprite n="jlkj/image 9.png" x="767" y="2" w="130" h="122"/>
+</TextureAtlas>

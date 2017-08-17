@@ -1,0 +1,4 @@
+﻿材料id	材料名字	材料图标
+1	木材	main_wood.png
+2	铁矿	main_iron.png
+3	奇怪的爪子	main_right_menu.png

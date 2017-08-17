@@ -1,0 +1,56 @@
+INT	STRING	INT	INT	INT	INT	STRING	STRING	INT	INT	INT	INT	INT	FLOAT	FLOAT	INT	INT	STRING	STRING	STRING	FLOAT	STRING	FLOAT	FLOAT	INT	FLOAT	FLOAT	INT	FLOAT
+ID	名字	阵营	等级	血量	攻击力	对应文件索引	对应武器xml	是否boss	攻击范围	掉落金钱最小	掉落金钱最大	掉落经验	攻击时间点	攻击间隔	占地面积	仇恨	掉落道具	掉落概率	掉落数量	移动速度	商店显示图	血条位置偏移X	血条位置偏移Y	血条大小	命中	闪避	AI类型	建造冷却时间
+1	蜜糖熊@:190	20	1	150	3	.//rabit//Boss.actor		1	3	40	40	27	0.5	1	3	0	1*2*3	500*200*300	1*1*1	1		0	96	2	0.7	0.3	1	3
+2	母狮子@:191	20	2	450	12	.//rabit//Boss.actor		1	3	65	65	44	0.5	1	3	0	5*3*4	100*100*800	1*1*2	1		0	96	2	0.7	0.3	1	3
+3	呆呆虎@:192	20	3	3	35	.//rabit//Boss_Laohu_LV3.actor		1	3	83	83	59	0.5	1	3	0	5*3*2*1	250*250*250*250	1*1*3	2		0	96	2	0.7	0.3	3	3
+4	披着鳄鱼皮的鳄鱼@:193	20	4	840	30	.//rabit//Boss.actor		1	2	134	134	95	0.5	1	3	0	0	0	0	1		0	96	2	0.7	0.3	1	3
+5	小鹅@:194	20	5	900	39	.//rabit//Boss.actor		1	4	178	178	132	0.5	1	3	0	0	0	0	1		0	96	2	0.7	0.3	1	3
+6	大猩猩@:195	20	6	1100	48	.//rabit//Boss.actor		1	3	287	287	214	0.5	1	3	0	0	0	0	1		0	96	2	0.7	0.3	1	3
+7	红骨狼@:196	20	7	1300	57	.//rabit//Boss.actor		1	1	465	465	346	0.5	1	3	0	0	0	0	1		0	96	2	0.7	0.3	1	3
+8	白狐@:197	20	8	1500	66	.//rabit//Boss.actor		1	2	752	752	560	0.5	1	3	0	0	0	0	1		0	96	2	0.7	0.3	1	3
+9	小仓鼠@:198	20	1	3	4	.//Rabit//Boss_Cangshu_LV2.actor		0	2	0	0	0	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	3	3
+10	小山羊@:199	20	2	25	4	.//Rabit//Warrior_Enemy_LV1.actor		0	1	40	40	15	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+11	小野猪@:200	20	1	300	7	.//Rabit//Ranger_Enemy_LV1.actor		0	1	51	51	20	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+12	小豪猪@:201	20	4	2	1	.//Rabit//Boss_Haozhu_LV1.actor		0	1	0	0	0	0.5	1	1	0	0	0	0	2		0	96	1	0.7	0.3	1	3
+13	小野鸡@:202	20	5	450	13	.//Rabit//Ranger_Enemy_LV1.actor		0	2	110	110	44	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+14	小乌龟@:203	20	6	550	16	.//Rabit//Warrior_Enemy_LV1.actor		0	3	178	178	71	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+15	小狸猫@:204	20	7	650	19	.//Rabit//Ranger_Enemy_LV1.actor		0	1	287	287	115	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+16	小螃蟹@:205	20	8	750	22	.//Rabit//Warrior_Enemy_LV1.actor		0	3	465	465	187	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+17	仓鼠@:206	20	8	3	1	.//Rabit//Ranger_Enemy_LV1.actor		0	1	465	465	187	0.5	1	1	0	0	0	0	2		0	96	1	0.7	0.3	1	3
+18	山羊@:207	20	7	650	4	.//Rabit//Warrior_Enemy_LV1.actor		0	2	287	287	115	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+19	野猪@:208	20	6	550	7	.//Rabit//Ranger_Enemy_LV1.actor		0	1	178	178	71	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+20	豪猪@:209	20	5	450	10	.//Rabit//Warrior_Enemy_LV1.actor		0	1	110	110	44	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+21	野鸡@:210	20	1	1	13	.//Rabit//Boss_Ji_LV1.actor		0	2	0	0	0	0.5	1	1	0	0	0	0	2		0	96	1	0.7	0.3	1	3
+22	乌龟@:211	20	3	300	16	.//Rabit//Warrior_Enemy_LV1.actor		0	3	51	51	20	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+23	狸猫@:212	20	2	225	19	.//Rabit//Ranger_Enemy_LV1.actor		0	1	40	40	15	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+24	螃蟹@:213	20	1	75	22	.//Rabit//Warrior_Enemy_LV1.actor		0	3	25	25	9	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+25	天助我也@:214	10	1	1	1	.//Rabit//Ranger_Enemy_LV1.actor		0	0	0	0	0	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+26	苦逼兔@:215	0	1	5	1	.//Rabit//Warrior_Enemy_LV1.actor		0	0	0	0	0	0.5	1	1	0	0	0	0	1		0	96	1	0.7	0.3	1	3
+27	喵1@:216	0	1	100	5	.//rabit//Ranger_Cat_LV1.actor	.//Rabit//arrow.actor	0	6	0	0	0	0.3	1	1	10	0	0	0	3	.//rabit//gongjian_cat.png	0	96	1	0.8	0.3	2	0.6
+28	喵2@:217	0	10	75	3	.//rabit//Warrior_Cat_LV1.actor		0	1	0	0	0	0.5	1	1	10	0	0	0	2	.//rabit//chuizi_cat.png	0	96	1	0.7	0.3	1	0.3
+29	喵3@:218	0	18	31	5	.//rabit//Ranger_Cat_LV1.actor		0	1	0	0	0	0.5	1	1	10	0	0	0	1		0	96	1	0.7	0.3	1	3
+30	喵4@:219	0	25	28	7	.//rabit//Warrior_Cat_LV1.actor		0	1	0	0	0	0.5	1	1	10	0	0	0	1		0	96	1	0.7	0.3	1	3
+31	喵5@:220	0	30	22	9	.//rabit//Ranger_Cat_LV1.actor		0	1	0	0	0	0.5	1	1	10	0	0	0	1		0	96	1	0.7	0.3	1	3
+32	喵6@:221	0	34	20	11	.//rabit//Warrior_Cat_LV1.actor		0	1	0	0	0	0.5	1	1	10	0	0	0	1		0	96	1	0.7	0.3	1	3
+33	喵7@:222	0	37	18	13	.//rabit//Ranger_Cat_LV1.actor		0	1	0	0	0	0.5	1	1	10	0	0	0	1		0	96	1	0.7	0.3	1	3
+34	喵8@:223	0	39	16	15	.//rabit//Warrior_Cat_LV1.actor		0	1	0	0	0	0.5	1	1	10	0	0	0	1		0	96	1	0.7	0.3	1	3
+35	喵9@:224	0	1	24	1	.//rabit//Ranger_Cat_LV1.actor		0	2	0	0	0	0.5	1	1	10	0	0	0	1		0	96	1	0.7	0.3	1	3
+36	喵10@:225	0	10	38	3	.//rabit//Warrior_Cat_LV1.actor		0	2	0	0	0	0.5	1	1	10	0	0	0	1		0	96	1	0.7	0.3	1	3
+37	喵11@:226	0	18	31	5	.//rabit//Ranger_Cat_LV1.actor		0	2	0	0	0	0.5	1	1	20	0	0	0	1		0	96	1	0.7	0.3	1	3
+38	喵12@:227	0	25	28	7	.//rabit//Warrior_Cat_LV1.actor		0	2	0	0	0	0.5	1	1	20	0	0	0	1		0	96	1	0.7	0.3	1	3
+39	喵13@:228	0	30	22	9	.//rabit//Ranger_Cat_LV1.actor		0	2	0	0	0	0.5	1	1	20	0	0	0	1		0	96	1	0.7	0.3	1	3
+40	喵14@:229	0	34	20	11	.//rabit//Warrior_Cat_LV1.actor		0	2	0	0	0	0.5	1	1	20	0	0	0	1		0	96	1	0.7	0.3	1	3
+41	喵15@:230	0	37	18	13	.//rabit//Ranger_Cat_LV1.actor		0	2	0	0	0	0.5	1	1	20	0	0	0	1		0	96	1	0.7	0.3	1	3
+42	喵16@:231	0	39	16	15	.//rabit//Warrior_Cat_LV1.actor		0	2	0	0	0	0.5	1	1	20	0	0	0	1		0	96	1	0.7	0.3	1	3
+43	喵17@:232	0	1	24	1	.//rabit//Ranger_Cat_LV1.actor		0	3	0	0	0	0.5	1	1	20	0	0	0	1		0	96	1	0.7	0.3	1	3
+44	喵18@:233	0	10	38	3	.//rabit//Warrior_Cat_LV1.actor		0	3	0	0	0	0.5	1	1	20	0	0	0	1		0	96	1	0.7	0.3	1	3
+45	喵19@:234	0	18	31	5	.//rabit//Ranger_Cat_LV1.actor		0	3	0	0	0	0.5	1	1	20	0	0	0	1		0	96	1	0.7	0.3	1	3
+46	喵20@:235	0	25	28	7	.//rabit//Warrior_Cat_LV1.actor		0	3	0	0	0	0.5	1	1	20	0	0	0	1		0	96	1	0.7	0.3	1	3
+47	喵21@:236	0	30	22	9	.//rabit//Ranger_Cat_LV1.actor		0	3	0	0	0	0.5	1	1	30	0	0	0	1		0	96	1	0.7	0.3	1	3
+48	喵22@:237	0	34	20	11	.//rabit//Warrior_Cat_LV1.actor		0	3	0	0	0	0.5	1	1	30	0	0	0	1		0	96	1	0.7	0.3	1	3
+49	喵23@:238	0	37	18	13	.//rabit//Ranger_Cat_LV1.actor		0	3	0	0	0	0.5	1	1	30	0	0	0	1		0	96	1	0.7	0.3	1	3
+50	喵24@:239	0	39	16	15	.//rabit//Warrior_Cat_LV1.actor		0	3	0	0	0	0.5	1	1	30	0	0	0	1		0	96	1	0.7	0.3	1	3
+51	羊咩咩@:297	0	39	16	15	.//rabit//NPC_Goat.actor		0	3	0	0	0	0.5	1	1	30	0	0	0	1	.//rabit//NPC_sheep_001.png	0	96	1	0.7	0.3	1	3
+52	功夫猫@:298	0	39	16	15	.//rabit//NPC_Goat.actor		0	3	0	0	0	0.5	1	1	30	0	0	0	1	.//rabit//NPC_cat_001.png	0	96	1	0.7	0.3	1	3
+53	玉兔妹@:297	0	39	16	15	.//rabit//NPC_MissionRabbit.actor		0	3	0	0	0	0.5	1	1	30	0	0	0	1	.//rabit//NPC_rebit_002.png	0	96	1	0.7	0.3	1	3
+54	犯二兔@:298	0	39	16	15	.//rabit//NPC_MissionRabbit.actor		0	3	0	0	0	0.5	1	1	30	0	0	0	1	.//rabit//NPC_MissionRabbit001.png	0	96	1	0.7	0.3	1	3

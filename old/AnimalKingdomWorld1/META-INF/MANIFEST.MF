@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.2
+Created-By: 1.6.0_10-rc2-b32 (Sun Microsystems Inc.)
+Main-Class: cyou.world.Woprld
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:4530c8f9b28241bacb51f95b85bc1d98$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="preOpenSWF.png" width="512" height="1024">
+    <sprite n="image 1.png" x="2" y="418" w="204" h="194" oX="50" oY="43" oW="300" oH="300" r="y"/>
+    <sprite n="image 11.png" x="2" y="814" w="198" h="198" oX="47" oY="49" oW="300" oH="300"/>
+    <sprite n="image 13.png" x="2" y="2" w="214" h="212" oX="34" oY="34" oW="300" oH="300"/>
+    <sprite n="image 15.png" x="218" y="2" w="210" h="202" oX="37" oY="45" oW="300" oH="300"/>
+    <sprite n="image 17.png" x="208" y="408" w="204" h="200" oX="46" oY="43" oW="300" oH="300" r="y"/>
+    <sprite n="image 19.png" x="2" y="216" w="204" h="200" oX="48" oY="50" oW="300" oH="300" r="y"/>
+    <sprite n="image 3.png" x="202" y="814" w="196" h="198" oX="46" oY="53" oW="300" oH="300" r="y"/>
+    <sprite n="image 5.png" x="218" y="206" w="206" h="200" oX="41" oY="49" oW="300" oH="300"/>
+    <sprite n="image 7.png" x="208" y="610" w="202" h="198" oX="46" oY="48" oW="300" oH="300" r="y"/>
+    <sprite n="image 9.png" x="2" y="614" w="200" h="198" oX="47" oY="47" oW="300" oH="300" r="y"/>
+</TextureAtlas>

@@ -1,0 +1,12 @@
+INT	STRING	STRING	STRING	STRING	INT	FLOAT	FLOAT	INT	INT	FLOAT	FLOAT	INT	INT	FLOAT	INT	STRING	INT	STRING	INT	FLOAT	STRING	STRING
+ID	名称	对应的xml	声音文件	针对的阵营	范围类型	是否瞬发	攻击距离	手势攻击个数	最大伤害数量	辅助延时	技能时间	技能播放次数	技能类型	Dot/Hot的时间间隔 buff/deBuff的时长	Dot/Hot的个数	对应属性	属性修改类型	属性修改的数值	表现类型	表现时间长度	子效果ID	子效果触发时间延迟
+1	闪电	.//CardEffict//shandian001.actor	sa	0*20	1	0	100	0	1	0.3	1	1	1	1	1	6	1	-1	1	1	0	0
+2	技能2	.//CardEffict//fire001.actor	aa	20	4	0	25	25	1	0.1	15	1	2	0.5	30	6	1	-1	3	1	3	0
+3	火焰熄灭效果	.//CardEffict//fire001f.actor	aa	20	1	0	1	0	1	1	0.3	1	1	-1	1	6	1	0	0	0	0	0
+4	技能4	.//CardEffict//Wind001.actor	aa	20	1	0	100	0	1	0.1	2	1	1	-1	1	6	1	-10	1	1	0	0
+5	技能5	.//CardEffict//shandian001.actor	aa	20	3	0	100	0	1	0.1	1	1	1	1	1	6	1	-1	1	1	0	0
+6	技能6	.//CardEffict//shandian001.actor	aa	20	3	0	100	50	1	0.1	1	1	1	1	1	6	1	-1	1	1	0	0
+7	技能7	.//CardEffict//shandian001.actor	aa	20	4	0	100	10	1	0.1	1	1	1	1	1	6	1	-1	1	1	0	0
+8	技能8	.//CardEffict//shandian001.actor	aa	20	4	0	100	100	1	0.1	1	1	1	1	1	6	1	-1	1	1	0	0
+9	技能9	.//CardEffict//shandian001.actor	aa	20	3	0	100	0	1	0.1	1	1	1	1	1	6	1	-1	1	1	0	0
+10	技能10	.//CardEffict//shandian001.actor	aa	20	3	0	100	0	1	0.1	1	1	1	1	1	6	1	-1	1	1	0	0

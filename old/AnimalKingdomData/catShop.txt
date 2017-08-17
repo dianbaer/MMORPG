@@ -1,0 +1,4 @@
+INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	FLOAT
+序列	猫id	货币类型	价格	需求材料1	需求材料1个数	需求材料2	需求材料2个数	需求材料3	需求材料3个数	训练CD
+1	27	1	6	0	0	0	0	0	0	4
+2	28	1	7	0	0	0	0	0	0	10

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ak.notice">
+    <class name="Notice" table="notice">
+        <id name="noticeId" column="notice_id">
+            <generator class="native"/>
+        </id>        
+        <property name="content" type="string"/>
+        <property name="addTime" type="timestamp" column="add_time"/>
+       
+    </class>
+</hibernate-mapping>

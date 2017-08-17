@@ -1,0 +1,59 @@
+<project name="serverengine" default="dist" basedir=".">
+	<property name="serverengine" location="${serverengine.dir}/src/main/java" />
+	<property name="serverengine-build" location="${serverengine.dir}/build" />
+	<property name="serverengine-dist" location="${serverengine.dir}/dist" />
+	<path id="libs">
+		<fileset dir="lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="snslib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	<target name="init">
+		<mkdir dir="${serverengine-build}" />
+		<copy file="${serverengine}\com\mrd\encode\libEncodeLib.so" todir="${serverengine-build}\com\mrd\encode" />
+		<copy file="${serverengine}\com\mrd\encode\EncodeLib.dll" todir="${serverengine-build}\com\mrd\encode" />
+	</target>
+
+	<target name="compileserver" depends="init">
+
+		<javac destdir="${serverengine-build}" debug="true" source="1.6" target="1.6" encoding="UTF-8">
+
+			<classpath>
+				<path refid="libs" />
+				<pathelement path="${serverengine-build}" />
+			</classpath>
+			<src path="${serverengine}" />
+		</javac>
+	</target>
+
+	<target name="distserver" depends="compileserver">
+		<mkdir dir="${serverengine-dist}" />
+		<jar destfile="${serverengine-dist}/serverengine.jar">
+			<fileset dir="${serverengine-build}">
+				<include name="**/cyou/**" />
+			</fileset>
+			<fileset dir="${serverengine-build}">
+				<include name="**/com/**" />
+			</fileset>
+			<fileset dir="${serverengine}">
+				<include name="**/*.xml" />
+			</fileset>
+			<fileset dir="${serverengine}">
+				<include name="**/*.properties" />
+			</fileset>
+			<fileset dir="${serverengine.dir}">
+				<include name="template/**" />
+			</fileset>
+		</jar>
+	</target>
+
+	<target name="dist" depends="clean, distserver" />
+
+	<target name="clean" description="clean up">
+		<delete dir="${serverengine-build}" />
+		<delete dir="${serverengine-dist}" />
+	</target>
+
+</project>

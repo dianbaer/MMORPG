@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.username">${ak_user}</property>
+		<property name="connection.url">jdbc:mysql://${ak_dburl}/${ak_database}?useUnicode=true&amp;characterEncoding=UTF8</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="connection.password">${ak_password}</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.max_size">50</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.timeout">7200</property>
+		<property name="hibernate.c3p0.max_statements">100</property>
+		<property name="hibernate.c3p0.idle_test_period">120</property>
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.acquireRetryAttempts">3</property>
+		<property name="hibernate.c3p0.acquireRetryDelay">2000</property>
+		<property name="hibernate.c3p0.breakAfterAcquireFailure">false</property>
+		<property name="current_session_context_class">thread</property>
+		<property name="show_sql">true</property>
+		<property name="hibernate.generate_statistics">true</property>
+		<property name="current_session_context_class">thread</property>
+
+		<mapping resource="cyou/mrd/account/Account.hbm.xml" />
+		<mapping resource="cyou/mrd/account/AccountSNS.hbm.xml" />
+		<mapping resource="ak/player/Player.hbm.xml" />
+		<mapping resource="ak/player/PlayerTransport.hbm.xml" />
+		<mapping resource="ak/friend/FriendHome.hbm.xml" />
+		<mapping resource="cyou/mrd/game/actor/Actor.hbm.xml" />
+		<mapping resource="cyou/mrd/game/relation/RelationList.hbm.xml" />
+		<mapping resource="ak/mail/MailEx.hbm.xml" />
+		<mapping resource="ak/notice/Notice.hbm.xml" />
+		<mapping resource="ak/optLog/UserOptLog.hbm.xml" />
+		<mapping resource="ak/playerSns/PlayerSns.hbm.xml" />
+		<mapping resource="cyou/mrd/keyword/KeyWord.hbm.xml" /> 
+		<mapping resource="cyou/mrd/charge/charge.hbm.xml" />
+		<mapping resource="ak/market/Market.hbm.xml" />
+		<mapping resource="ak/market/MarketLog.hbm.xml" />
+		<mapping resource="ak/rank/Rank.hbm.xml" />
+		<mapping resource="ak/trade/Trade.hbm.xml" />
+	</session-factory>
+
+</hibernate-configuration>

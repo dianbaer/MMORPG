@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>MapEditor</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.apollobuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.apollonature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] GUI-src</name>
+			<type>2</type>
+			<location>C:/Users/xuepeng/Desktop/server/压力测试客户端/GUI/src</location>
+		</link>
+		<link>
+			<name>[source path] Game-src</name>
+			<type>2</type>
+			<location>C:/Users/xuepeng/Desktop/server/压力测试客户端/Game/src</location>
+		</link>
+	</linkedResources>
+</projectDescription>

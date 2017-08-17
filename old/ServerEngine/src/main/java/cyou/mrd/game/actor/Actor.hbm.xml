@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cyou.mrd.game.actor">
+    <class name="Actor" table="player">
+        <id name="id" column="id">
+            <generator class="assigned"/>
+        </id>
+        <property name="accountId" type="int"/>
+        <property name="name" type="string"/>
+        <property name="icon" type="string"/>
+        <property name="level" type="int"/>
+        <property name="star" type="int"/>
+        <property name="raceId" type="int"/>
+        <property name="rich" type="int"/>
+        <property name="lastLoginTime" type="timestamp"/>
+    </class>
+	
+</hibernate-mapping>

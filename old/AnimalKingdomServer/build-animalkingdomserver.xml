@@ -1,0 +1,100 @@
+<project name="animalkingdomserver" default="dist" basedir=".">
+	<property name="server" location="${server-animalkingdom.dir}/src" />
+	<property name="server-build" location="${server-animalkingdom.dir}/build" />
+	<property name="server-dist" location="${server-animalkingdom.dir}/dist" />
+	<property name="webRoot" value="${server-animalkingdom.dir}/WebRoot" />
+	<property name="lib" value="${webRoot}/WEB-INF/lib" />
+	<property name="webxml" value="${webRoot}/WEB-INF/web.xml" />
+
+	<target name="generwar" depends="distserver">
+		<!--<copy file="${server-animalkingdom.dir}/custom.properties" todir="${webRoot}/WEB-INF/classes/" />-->
+		<war destfile="${server-dist}/AK.war" webxml="${webxml}">
+			<fileset dir="WebRoot">
+				<include name="*.js*" />
+				<include name="update.*"/>
+				<include name="v"/>
+			</fileset>
+			<lib dir="${serverengine.dir}/lib">
+				<include name="*.jar" />
+			</lib>
+			<lib dir="${serverengine.dir}/snslib">
+				<include name="*.jar" />
+			</lib>
+			<lib dir="${server-animalkingdom.dir}/lib">
+				<include name="*.jar" />
+			</lib>
+			<lib dir="${serverengine.dir}/dist">
+				<include name="*.jar" />
+			</lib>
+			<lib dir="${server-dist}">
+				<include name="*.jar" />
+			</lib>
+			<!--<classes dir="${server}">
+				<include name="*.cfg.xml" />
+			</classes>
+			
+			<classes dir="${server-animalkingdom.dir}">
+				<include name="custom.properties" />
+			</classes>-->
+			<classes dir="${server}">
+				<include name="log4j.properties" />
+			</classes>
+		</war>
+	</target>
+
+	<path id="libs">
+		<fileset dir="${serverengine.dir}/lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${server-animalkingdom.dir}/lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${serverengine.dir}/dist">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement location="${webRoot}/WEB-INF/classes" />
+	</path>
+
+	<target name="init">
+		<mkdir dir="${server-build}" />
+		<mkdir dir="${server-dist}" />
+		<mkdir dir="${webRoot}/WEB-INF/classes" />
+	</target>
+
+	<target name="compileakserver" depends="init">
+		<javac destdir="${server-build}" debug="true" source="1.6" target="1.6" encoding="UTF-8">
+			<classpath>
+				<path refid="libs" />
+				<pathelement path="${server-build}" />
+			</classpath>
+			<src path="${server}" />
+		</javac>
+	</target>
+
+	<target name="distserver" depends="compileakserver">
+		<mkdir dir="${server-dist}" />
+		<jar destfile="${server-dist}/animalkingdomserver.jar">
+			<fileset dir="${server-build}">
+				<include name="**/ak/**" />
+			</fileset>
+			<fileset dir="${server-animalkingdom.dir}/src">
+				<include name="**/*.xml" />
+			</fileset>
+			<!--
+			<fileset dir="${server-animalkingdom.dir}/src">
+				<include name="**/*.properties" />
+			</fileset>
+			-->
+		</jar>
+	</target>
+
+	<target name="dist" depends="clean, generwar" />
+
+	<target name="clean" description="clean up">
+		<delete dir="${server-build}" />
+		<delete dir="${server-dist}" />
+		<delete dir="${webRoot}/WEB-INF/classes" />
+	</target>
+
+
+</project>

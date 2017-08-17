@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ak.market">
+    <class name="MarketLog" table="market_log">
+        <id name="logId" column="log_id">
+            <generator class="native"/>
+        </id>     
+        <property name="type" type="int"/> 
+        <property name="pos" type="int"/>            
+        <property name="itemId" type="int" column="item_id"/>        
+        <property name="itemNum" type="int" column="item_num"/>  
+        <property name="price" type="int"/>   
+        <property name="sellPlayerId" type="int" column="sell_player_id"/>        
+		<property name="buyPlayerId" type="int" column="buy_player_id"/>     
+        <property name="addTime" type="timestamp" column="add_time"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,8 @@
+STRING, STRING
+USER, PASSWORD
+ak_1, ak_1
+ak_2, ak_2
+ak_3, ak_3
+ak_4, ak_4
+cs_1, cs_1
+yg_1, yg_1

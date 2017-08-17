@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ak.friend">
+	<class name="FriendHome" table="friend_home">
+		<id name="id" column="id">
+			<generator class="assigned" />
+		</id>
+		<property name="playerId" type="int" />
+		<property name="friendId" type="int" />
+		<property name="clearTimes" type="int" />
+		<property name="clearDay" type="int" />
+		<property name="transportTimes" type="int" />
+		<property name="transportDay" type="int" />
+		<property name="sendTimes" type="int" />
+		<property name="sendDay" type="int" />
+		<property name="fieldState" type="int" />
+		<property name="fieldDay" type="int" />
+		<property name="houseState" type="int" />
+		<property name="houseDay" type="int" />
+		<property name="npcId" type="int" />
+	</class>
+
+</hibernate-mapping>

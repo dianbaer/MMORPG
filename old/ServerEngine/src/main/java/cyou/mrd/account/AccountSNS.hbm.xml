@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cyou.mrd.account">
+    <class name="AccountSNS" table="account_sns">
+        <id name="id" column="id">
+			<generator class="assigned" />
+		</id>
+        <property name="cyouId" type="string"/>
+        <property name="facebookId" type="string"/>
+        <property name="kaixinId" type="string"/>
+        <property name="QQId" type="string"/>
+        <property name="renrenId" type="string"/>
+        <property name="weiboId" type="string"/>
+        <property name="twitterId" type="string"/>
+    </class>
+	
+</hibernate-mapping>

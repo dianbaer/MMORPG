@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--log template-->
+	<config>
+		<!--###### platform global config ######-->
+		<global>
+			<!--###### 游戏标识 ######-->
+			<field default-value="1" name="appkey"/>
+			<!--###### 分区ID ######-->
+			<field default-value="1" name="serverId"/>
+			<!--###### 渠道id ######-->
+			<field default-value="1" name="channelId"/>
+		</global>
+		<!--###### game global config ######-->
+		<game/>
+		<!--###### private config ######-->
+		<template>
+			<!--###### 心跳模块统计日志信息配置 ######-->
+			<pattern type="heartbeat">
+				<!--###### 时间 ######-->
+				<field default-value="None" name="timestamp"/>
+				<!--###### 账户id ######-->
+				<field default-value="None" name="accountId"/>
+				<!--###### 角色id ######-->
+				<field default-value="None" name="roleId"/>
+				<!--###### 角色等级 ######-->
+				<field default-value="None" name="level"/>
+				<!--###### 角色名 ######-->
+				<field default-value="None" name="roleName"/>
+			</pattern>
+			<!--###### PVE模块统计日志信息配置 ######-->
+			<pattern type="PVEfight">
+				<!--###### 时间 ######-->
+				<field default-value="None" name="timestamp"/>
+				<!--###### 账户id ######-->
+				<field default-value="None" name="accountId"/>
+				<!--###### 角色id ######-->
+				<field default-value="None" name="roleId"/>
+				<!--###### 角色等级 ######-->
+				<field default-value="None" name="level"/>
+				<!--###### 角色名 ######-->
+				<field default-value="None" name="roleName"/>
+				<!--###### 关卡id ######-->
+				<field default-value="None" name="guanQiaId"/>
+				<!--###### 星级 ######-->
+				<field default-value="None" name="star"/>
+				<field default-value="None" name="type"/>
+			</pattern>
+			<!--###### 登出模块统计日志信息配置 ######-->
+			<pattern type="logout">
+				<!--###### 时间 ######-->
+				<field default-value="None" name="timestamp"/>
+				<!--###### 账户id ######-->
+				<field default-value="None" name="accountId"/>
+				<!--###### 角色id ######-->
+				<field default-value="None" name="roleId"/>
+				<!--###### 角色等级 ######-->
+				<field default-value="None" name="level"/>
+				<!--###### 角色名 ######-->
+				<field default-value="None" name="roleName"/>
+			</pattern>
+			<!--###### 建造建筑模块统计日志信息配置 ######-->
+			<pattern type="building">
+				<!--###### 时间 ######-->
+				<field default-value="None" name="timestamp"/>
+				<!--###### 账户id ######-->
+				<field default-value="None" name="accountId"/>
+				<!--###### 角色id ######-->
+				<field default-value="None" name="roleId"/>
+				<!--###### 角色等级 ######-->
+				<field default-value="None" name="level"/>
+				<!--###### 角色名 ######-->
+				<field default-value="None" name="roleName"/>
+				<!--###### 建筑物id ######-->
+				<field default-value="None" name="buildingId"/>
+				<!--###### 建筑物等级 ######-->
+				<field default-value="None" name="buildLevel"/>
+			</pattern>
+			<!--###### 金币消耗模块统计日志信息配置 ######-->
+			<pattern type="moneycost">
+				<!--###### 时间 ######-->
+				<field default-value="None" name="timestamp"/>
+				<!--###### 账户id ######-->
+				<field default-value="None" name="accountId"/>
+				<!--###### 角色id ######-->
+				<field default-value="None" name="roleId"/>
+				<!--###### 角色等级 ######-->
+				<field default-value="None" name="level"/>
+				<!--###### 角色名 ######-->
+				<field default-value="None" name="roleName"/>
+				<!--###### 原来值 ######-->
+				<field default-value="None" name="oldValue"/>
+				<!--###### 当前值 ######-->
+				<field default-value="None" name="nowValue"/>
+				<!--###### 类型（1：元宝，2：金币） ######-->
+				<field default-value="None" name="type"/>
+			</pattern>
+			<!--###### 人口使用模块统计日志信息配置 ######-->
+			<pattern type="population">
+				<!--###### 时间 ######-->
+				<field default-value="None" name="timestamp"/>
+				<!--###### 账户id ######-->
+				<field default-value="None" name="accountId"/>
+				<!--###### 角色id ######-->
+				<field default-value="None" name="roleId"/>
+				<!--###### 角色等级 ######-->
+				<field default-value="None" name="level"/>
+				<!--###### 角色名 ######-->
+				<field default-value="None" name="roleName"/>
+				<!--###### 原来人口总量 ######-->
+				<field default-value="None" name="oldValue"/>
+				<!--###### 当前人口总量 ######-->
+				<field default-value="None" name="nowValue"/>
+			</pattern>
+			<!--###### 新手引导模块统计日志信息配置 ######-->
+			<pattern type="guide">
+				<!--###### 时间 ######-->
+				<field default-value="None" name="timestamp"/>
+				<!--###### 账户id ######-->
+				<field default-value="None" name="accountId"/>
+				<!--###### 角色id ######-->
+				<field default-value="None" name="roleId"/>
+				<!--###### 角色等级 ######-->
+				<field default-value="None" name="level"/>
+				<!--###### 角色名 ######-->
+				<field default-value="None" name="roleName"/>
+				<!--###### 步骤 ######-->
+				<field default-value="None" name="step"/>
+				<!--###### 引导类型（1：剧情引导，2：新手引导） ######-->
+				<field default-value="None" name="type"/>
+				<!--###### 引导id ######-->
+				<field default-value="None" name="id"/>
+			</pattern>
+			<!--###### 钻石异常统计日志信息配置 ######-->
+			<pattern type="diamond">
+				<!--###### 时间 ######-->
+				<field default-value="None" name="timestamp"/>
+				<!--###### 账户id ######-->
+				<field default-value="None" name="accountId"/>
+				<!--###### 角色id ######-->
+				<field default-value="None" name="roleId"/>
+				<!--###### 角色等级 ######-->
+				<field default-value="None" name="level"/>
+				<!--###### 角色名 ######-->
+				<field default-value="None" name="roleName"/>
+				<!--###### 原来的imoney ######-->
+				<field default-value="None" name="imoney0"/>
+				<!--###### 上传的imoney ######-->
+				<field default-value="None" name="imoney1"/>
+				<!--###### 原来的rewardDollar ######-->
+				<field default-value="None" name="rewardDollar0"/>
+				<!--###### 上传的rewardDollar ######-->
+				<field default-value="None" name="rewardDollar1"/>
+				<!--###### 原来的usedDollar ######-->
+				<field default-value="None" name="usedDollar0"/>
+				<!--###### 上传的usedDollar ######-->
+				<field default-value="None" name="usedDollar1"/>
+				<!--###### 原来的compensateDollar ######-->
+				<field default-value="None" name="compensateDollar0"/>
+				<!--###### 上传的compensateDollar ######-->
+				<field default-value="None" name="compensateDollar1"/>
+				<!--###### 原来的initDollar ######-->
+				<field default-value="None" name="initDollar0"/>
+				<!--###### 上传的initDollar ######-->
+				<field default-value="None" name="initDollar1"/>
+			</pattern>
+		</template>
+	</config>

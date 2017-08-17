@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ak.trade">
+    <class name="Trade" table="trade">
+   		<!-- 联合主键 -->
+        <composite-id>
+        	<key-property name="playerId" type="int" column="player_id"/>
+        	<key-property name="pos" type="int" column="pos"/>
+        </composite-id>
+        <property name="tradeId" type="int" column="trade_id"/>
+        <property name="boxId" type="int" column="box_id"/>
+        <property name="status" type="int"/>
+        <property name="itemId" type="int" column="item_id"/>
+        <property name="itemNum" type="int" column="item_num"/>
+ 		<property name="helpPlayerId" type="int" column="help_player_id"/>
+ 		<property name="helpPlayerName" type="string" column="help_player_name"/>
+ 		<property name="helpPlayerIcon" type="string" column="help_player_icon"/>
+ 		<property name="helpPlayerRich" type="int" column="help_player_rich"/>
+    </class>
+</hibernate-mapping>

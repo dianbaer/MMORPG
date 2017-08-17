@@ -1,0 +1,66 @@
+﻿<?xml version="1.0"?>
+<project name="animalkingdom" basedir="." default="build">
+	<property file="build-custom.properties"/>
+
+	<property name="build" location="${buildpath}" />
+	<property name="dist" location="${destpath}/${v}" />
+
+	<property name="serverengine.dir" value="${ServerEngineDir}" />
+	<property name="server-animalkingdom.dir" value="${AnimalKingdomServerDir}" />
+	<property name="world.dir" value="${WorldDir}" />
+	<property name="server-data.dir" value="${dataDir}" />
+
+ 
+	<target name="build-serverengine" depends="">
+		<ant antfile="buildserverengine.xml" dir="${serverengine.dir}">
+			<property file="custom.properties" />
+		</ant>
+	</target>
+
+	<target name="build-world" depends="">
+		<ant antfile="buildWorld.xml" dir="${world.dir}">
+			<property file="build-custom.properties" />
+		</ant>
+	</target>
+
+	<target name="build-animalkingdomserver" depends="">
+		<ant antfile="build-animalkingdomserver.xml" dir="${server-animalkingdom.dir}">
+			<property file="build-custom.properties" />
+		</ant>
+	</target>
+	<target name="7z" depends="">
+		<exec executable="${7z}">
+			<!-- x表示排除哪些文件，r表示递归子目录 -->
+			<arg line="a ${destpath}/data.zip ${data.dir} -xr!*etd* -xr!*svn* -xr!*CVS*" />
+		</exec>
+	</target>
+
+	<target name="cleandist" description="clean up">
+		<delete file="${dist}/serverengine.jar" />
+		<delete file="${dist}/animalkingdom.jar" />
+		<delete file="${dist}/world.jar" />
+		<delete file="${dist}/data.7z" />
+	</target>
+
+	<tstamp prefix="my">
+		<format property="day" pattern="yyyy-MM-dd" />
+		<format property="time" pattern="HH:mm:ss" />
+		<format property="dt" pattern="yyyy-MM-dd HH:mm:ss.SSS" />
+	</tstamp>
+
+	<target name="build">
+		<echo message="my.time = ${my.time}" />
+		<antcall target="cleandist" />
+		<antcall target="build-serverengine" />
+		<antcall target="build-animalkingdomserver" />
+		<antcall target="build-world" />
+		<!--<antcall target="7z" />
+-->
+		<mkdir dir="${dist}" /> 
+  
+		<copy file="${server-animalkingdom.dir}/dist/AK.war" todir="${dist}" />
+		<copy file="${server-animalkingdom.dir}/animal_kingdom.sql" todir="${dist}" />  
+		<copydir dest="${dist}/world" src="${world.dir}/dist/world"></copydir>
+		<copydir dest="${dist}/resource" src="${server-animalkingdom.dir}/resource"></copydir>
+	</target>
+</project>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ak.playerSns">
+    <class name="PlayerSns" table="player_sns">
+        <id name="playerId" column="player_id">
+			<generator class="assigned" />
+		</id>
+        <property name="helpCount" type="int" column="help_count"/>
+        <property name="lastHelpDay" type="int" column="last_help_day"/>
+        <property name="treeX" type="int" column="tree_x"/>
+        <property name="treeY" type="int" column="tree_y"/>
+        <property name="treeGrade" type="int" column="tree_grade"/>
+		<property name="treeStatus" type="int" column="tree_status"/>
+        <property name="visitCount" type="int" column="visit_count"/>
+        <property name="visitRecord" type="string" column="visit_record"/>
+        <property name="lastHarvestTime" type="int" column="last_harvest_time"/>
+        <property name="sendCount" type="int" column="send_count"/>
+        <property name="lastSendDay" type="int" column="last_send_day"/>
+        <property name="activeCount" type="int" column="active_count"/>
+        <property name="lastActiveTime" type="int" column="last_active_time"/>
+        <property name="firstVisit" type="int" column="first_visit"/>
+    </class>
+</hibernate-mapping>

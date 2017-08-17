@@ -1,0 +1,240 @@
+测试服安装及更新说明。
+
+测试服IP：124.248.42.63
+测试服PORT: 8080
+测试服URL：/AK/s
+
+
+整个测试服现分为两大块，一个GameServer服务，一个World服务，一个Billing服务（正式需连接统一的付费服务器）
+
+上面服务的启动顺序为 Billing服务 -> World服务  -> GameServer服务
+
+=================================================================================================================
+1.Billing服务安装
+
+
+
+=================================================================================================================
+2.World服务安装
+监听端口：7005
+
+服务路径：/home/mrdTomcat/legend_of_rabbit_knight/world 
+启动：./startup.sh
+停止：kill该进程
+world目录下结构：
+logs 为本服务的系统日志，控制台输出
+stdout.log
+stdout.log.YYYYMMDD格式都是控制台输出日志
+logs/目录下相关日志清除。
+
+统计日志路径:/home/mrdTomcat/legend_of_rabbit_knight/world_logs
+此服务正常不会进行更新，如果serverengine.jar有更新只需更新此jar包即可。
+此服务固定配置文件
+/home/mrdTomcat/legend_of_rabbit_knight/world/custom.properties下，并且配置都已配置好。
+
+
+
+=================================================================================================================
+3.GameServer服务安装
+监听端口：8080
+
+此服务在测试服上是以文件夹形式安装到tomcat中的，没有打包成war格式，原因方便更新维护时把一些配置文件进行替换。
+维护更新时，只涉及到animalkingdomserver.jar, serverengine.jar这2个jar包的更新。
+注：serverengine.jar 中有个libEncodeLib.so这个文件，主要是编解码工具包。放到对应class文件所在的目录即可。
+源代码版本中只有EncodeLib.dll，只需要将这个dll复制并重命名为libEncodeLib.so（Linux系统读的是这个名称）并放入到同级
+目录即可。
+
+此服务的地址：/home/app/tomcat1/webapps/AK 根目录
+上面2个jar放入的地址：/home/app/tomcat1/webapps/AK/WEB-INF/lib 目录下
+
+固定配置文件:log4j.properties custom.properties 应放到/home/app/tomcat1/webapps/AK/WEB-INF/classes目录下
+因为这2个文件不会频繁修改，放到此处不会在以后更新维护时覆盖。
+注：这2个配置文件已按测试服的工作环境配置好，正常情况下不需要改动。如需改动需手动修改vi或下到本修改再上传都可以。
+
+启动，停止该服务：
+启动
+1. 进入到/home/app/tomcat1/bin目录下，并执行./startup.sh即可。
+   如果有错误，日志在bin/logs目录下会存在一个AnimalKingdomServer.log类似的日志可以查看，如果正常启动则没有此日志。
+
+停止
+2. 直接kill掉进程即可。
+
+打jar包时注意：
+1.animalkingdomserver.jar 里面的config.xml中的HTTP_ENCODE 设置为flase,因为服务器上没有libEncodeLib.so文件，等拿到了就可以自由设置了。
+
+2.serverengine.jar 里面的config.xml,account.cfg.xml不要打进去。
+
+Server日志路径：/home/mrdTomcat/legend_of_rabbit_knight/ak_logs
+
+=================================================================================================================
+4.AnimalKingdomData 数据目录直接覆盖即可。
+服务路径:/home/mrdTomcat/legend_of_rabbit_knight/AnimalKingdomData
+
+
+
+=================================================================================================================
+Memcached缓存:只需启动和停止
+/home/app/memcached/bin/memcached -d -m 4096 -u root -l 10.16.42.63 -p 11211
+停的时候直接杀掉进程就行
+
+
+=================================================================================================================
+Mysql服务：
+
+这块只有animal_kingdom的权限，没有其他权限，所以只需要能进入操作就可以。
+
+mysql -h127.0.0.1 -upat4 -ppat4123456 
+进入后use animal_kingdom即可。
+以后更新维护只需要将sql语句复制过来执行就可以了。
+要是清档的话，可以写个清档sql语句，将各个表的数据都删除了。注：因为可能不支持create database命令。不然又麻烦系统人员重新建库。
+
+
+
+
+服务端工具软件：
+SecureCRT, WinSCP
+
+
+=================================================================================================================
+更新步骤流程：
+1.上传并覆盖服务数据包AnimalKingdomData
+2.kill 掉相关进程，gameserver进程，world进程
+3.清空所有memcached数据。执行：telnet 10.16.42.63 11211 --> flush_all
+4.更新数据库，具体依实际情况为准。规则：更新一律采用sql语句方式，删除数据前要确认清楚。
+5.更新World服。是否删除相关world日志依具体情况而定。
+6.更新Server服。是否删除相关world日志依具体情况而定。
+
+指令：
+netstat -ntlp 显示进程
+ll 显示目录
+cd ..返回上一层
+cd aaa 进入下一层
+pwd 显示当前目录
+su root 切换到管理员
+touch /var/log/vsftp.log 创建一个文件
+rm vsftp.log 删除一个文件，打y确认删除
+ifconfig  查询id
+
+chkconfig vsftpd on每次开始时自动启动
+service vsftpd on开启ftp
+netstat -tl
+useradd -d /var/www -g ftp -s /sbin/nologin myftp
+-d /var/www指定目录
+-g ftp 加入ftp组
+-s /sbin/nologin 该用户不能登录系统
+myftp ftp用户名
+passwd myftp 设置密码
+chown -R myftp /var/www 递归把所有目录下的所有问价拥有者添加到myftp
+chmod -R 755 /var/www 递归设置拥有者全部权限，其他用户只能读取和执行权限
+
+service vsftpd restart 重启
+
+service sshd status
+
+chkconfig --list|grep vsftpd 查看启动方式 2-5为on就能启动
+service iptables stop停止防火墙 
+
+service iptables start 开启防火墙
+
+开始关闭防火墙后 可以连接ftp了
+不能上传的解决办法
+setsebool ftp_home_dir on  能显示目录
+setsebool allow_ftpd_full_access on  能够上传
+
+java：
+
+java -version
+rpm -qa|grep java
+yum -y remove java-1.6.0-openjdk-1.6.0.0-1.45.1.11.1.el6.x86_64
+yum -y remove tzdata-java-2012c-l.el6.noarch
+mkdir /usr/java
+cp *.gz /usr/java
+tar -xzvf *.gz
+mc * jdk
+vi /etc/profile
+export JAVA_HOME=/usr/java/jdk
+export PATH=$JAVA_HOME:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+source /etc/profile
+
+
+mysql:
+yum remove mysql
+
+nginx
+cd /var/www/xp
+tar -zxv -f nginx-1.4.3.tar.gz  解压
+rm -rf nginx-1.4.3.tar.gz  移除
+mv nginx-1.4.3 nginx 改名
+cd /var/www/xp/nginx  进入
+./configure --prefix=/usr/local/nginx  配置
+make 编译
+make install 安装
+cd /usr/local/nginx/sbin进入路径
+./nginx 启动
+/usr/local/nginx/sbin/nginx -s reload 重启
+
+
+
+
+压力测试抓包工具 ：csnas_tech_7.7.2.4032.zip
+
+
+//只导出数据
+mysqldump -h127.0.0.1 -t --complete-insert -uroot -p lwjh_db >test.sql
+
+
+
+
+
+show create database tlyd3;
+alter database tlyd3 character set utf8;
+
+
+tar命令
+
+　　解包：tar zxvf FileName.tar
+
+　　打包：tar czvf FileName.tar DirName
+
+tar czvf TLYDServer20141209.tar TLYDServer.log.20141209*
+
+
+阿里云
+yum install vsftpd -y
+useradd -d /var/www -g ftp -s /sbin/nologin myftp
+passwd myftp
+chown -R myftp /var/www
+service vsftpd restart
+service sshd status
+./jdk-6u45-linux-x64.bin 解压jdk
+
+http://whatismyipaddress.com/?u=true
+
+
+cat TLYDServer.log | grep 'online user'
+
+
+sed -i -e '22,24d' LWJH_DB_appstore_2-dump-2014051303.sql 
+
+more 看哪行
+jobs 在干什么
+
+rz上传
+
+unzip 解压
+df -h 空间
+file /bin/ls 看32位还是64位
+
+grep
+
+
+
+
+grep -R 'xxxxx' * > forDay.log 遍历文件夹里面文件的
+
+
+
+
+
+

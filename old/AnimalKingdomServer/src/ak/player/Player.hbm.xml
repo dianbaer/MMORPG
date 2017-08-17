@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ak.player">
+	<class name="PlayerEx" table="player">
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		<property name="name" type="string" />
+		<property name="items" type="string" />
+		<property name="accountId" type="int" />
+		<property name="level" type="int" />
+		<property name="money" type="int" />
+		<property name="openBlock" type="int" />
+		<property name="openBlock2" type="int" />
+		<property name="openBlock3" type="int" />
+		<property name="openBlock4" type="int" />
+		<property name="icon" type="string" />
+		<property name="housePassword" type="string" column="moveHousePassword"/>
+		<property name="housePasswordCreateTime" type="timestamp" />
+		<property name="battleTimes" type="int" />
+		<property name="battleWinTimes" type="int" />
+		<property name="rabit0Number" type="int" />
+		<property name="rabit1Number" type="int" />
+		<property name="rabit0Number2" type="int" />
+		<property name="rabit1Number2" type="int" />
+		<property name="rabit0Number3" type="int" />
+		<property name="rabit1Number3" type="int" />
+		<property name="rabit0Number4" type="int" />
+		<property name="rabit1Number4" type="int" />
+		<property name="catsInfo" type="string" />
+		<property name="star" type="int" />
+		<property name="lang" type="int" />
+		<property name="exist" type="int" />
+		
+		<property name="questList" column="quest" type="ak.quest.QuestListUserType" />
+		<property name="questList2" column="quest2" type="ak.quest.QuestListUserType" />
+		<property name="questList3" column="quest3" type="ak.quest.QuestListUserType" />
+		<property name="questList4" column="quest4" type="ak.quest.QuestListUserType" />
+			
+		<property name="buildingList" column="building" type="ak.building.BuildingListUserType" />
+		<property name="buildingList2" column="building2" type="ak.building.BuildingListUserType" />
+		<property name="buildingList3" column="building3" type="ak.building.BuildingListUserType" />
+		<property name="buildingList4" column="building4" type="ak.building.BuildingListUserType" />
+        <property name="pool" type = "cyou.mrd.entity.PropertyPoolType" column="pool"/>
+        <!-- 以下为新版添加属性 -->
+        <property name="raceId" type="int" />
+        <property name="rich" type="int" />
+        <property name="stone" type="int" />
+        <property name="food" type="int" />
+        <property name="woods" type="int" />  
+        <property name="exp" type="int" />
+        <property name="love" type="int" />
+        <property name="lastLoginTime" type="timestamp"/>
+        <property name="lastSynchInfoTime" type="timestamp"/>
+        <property name="allCatCount" type="int"/>
+        <property name="allBattleStarCount" type="int"/>
+        <property name="jsonData" type="string" />
+	</class>
+
+</hibernate-mapping>

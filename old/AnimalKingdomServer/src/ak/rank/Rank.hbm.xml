@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ak.rank">
+    <class name="Rank" table="rank">
+        <id name="rankId" column="rank_id">
+            <generator class="native"/>
+        </id>        
+        <property name="type" type="int"/>
+        <property name="lastRank" type="int" column="last_rank"/>
+        <property name="nowRank" type="int" column="now_rank"/>
+        <property name="value" type="int"/>
+        <property name="playerId" type="int" column="player_id"/>
+        <property name="rankDay" type="int" column="rank_day"/>
+        <property name="playerName" type="string" column="player_name"/>
+        <property name="playerLvl" type="int" column="player_lvl"/>
+       
+    </class>
+</hibernate-mapping>

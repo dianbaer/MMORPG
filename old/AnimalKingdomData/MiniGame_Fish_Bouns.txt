@@ -1,0 +1,9 @@
+INT	STRING	FLOAT	FLOAT	STRING	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT
+ID	说明	经验奖励	金钱奖励	xml文件	等级段1	几率	等级段2	几率	等级段3	几率	等级段4	几率	等级段5	几率	等级段6	几率
+1	蓝色鱼	1	0	Rabit/MiniGame_Fish_small_blue.actor	1	10	9	10	15	10	20	10	25	10	30	10
+2	紫色鱼	0	10	Rabit/MiniGame_Fish_small_purple.actor	3	10	9	10	15	10	20	10	25	10	30	10
+3	黑色鱼	2	0	Rabit/MiniGame_Fish_mid_black.actor	1	10	9	10	15	10	20	10	25	10	30	10
+4	红色鱼	0	20	Rabit/MiniGame_Fish_mid_red.actor	1	10	9	10	15	10	20	10	25	10	30	10
+5	白色鱼	0	30	Rabit/MiniGame_Fish_big_white.actor	1	10	9	10	15	10	20	10	25	10	30	10
+6	金色鱼	5	0	Rabit/MiniGame_Fish_big_gold.actor	1	10	9	10	15	10	20	10	25	10	30	10
+7	破罐子	0	0	Rabit/MiniGame_Fish_rubbish.actor	1	15	9	12	15	10	20	8	25	5	30	3

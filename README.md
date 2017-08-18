@@ -53,9 +53,9 @@ threecss-mmorpg是基于ThreeCSS分布式框架开发的一款通用型的MMORPG
 
 	1、将dist/asset与dist/webgame考入web容器（httpd、nginx等），例如
 	
-		/var/www/html/webgame
+		/home/tomcat/webgame
 		
-		/var/www/html/asset
+		/home/tomcat/webgame/asset
 		
 		修改asset/config.js参数
 		

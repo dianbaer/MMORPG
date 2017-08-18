@@ -52,6 +52,9 @@
 			<fileset dir="${world-build}">
 				<include name="**/**"/>
 			</fileset>
+			<fileset dir="${world}">
+				<include name="**/*.xml"/>
+			</fileset>
 			<manifest>
 				<attribute name="Build-by" value="${user.name}"/>
 				<attribute name="Main-Class" value="cyou.world.World"/>

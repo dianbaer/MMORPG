@@ -8,7 +8,7 @@
 
  
 	<target name="build-serverengine" depends="">
-		<ant antfile="buildserverengine.xml" dir="${serverengine.dir}">
+		<ant antfile="buildServerEngine.xml" dir="${serverengine.dir}">
 		</ant>
 	</target>
 

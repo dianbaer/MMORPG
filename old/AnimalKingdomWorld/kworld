@@ -1,4 +1,0 @@
-kill `cat animalworld.pid`
-
-ps -ef|grep cyou.akworld
-

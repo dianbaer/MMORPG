@@ -1,11 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 cd /home/world
 DATESTR=`date +%Y%m%d`
-rm -f stdout.log.$DATESTR
-mv stdout.log stdout.log.$DATESTR
+rm -f world.log.$DATESTR
+mv world.log world.log.$DATESTR
 
-#tail -f stdout.log
 
 LIB_PATH=./lib/antlr-2.7.6.jar:./lib/asm-3.1.jar:./lib/commons-httpclient-3.1.jar
 LIB_PATH=$LIB_PATH:./lib/c3p0-0.9.1.jar
@@ -17,8 +16,8 @@ LIB_PATH=$LIB_PATH:./lib/slf4j-api-1.6.0.jar:./lib/slf4j-log4j12-1.6.1.jar:./lib
 LIB_PATH=$LIB_PATH:./lib/commons-primitives-1.0.jar:./lib/ehcache-core-2.4.2.jar:./lib/java_memcached-release_2.5.1.jar
 LIB_PATH=$LIB_PATH:./lib/serverengine.jar:./lib/javassist.jar
 
-$JAVA_HOME/bin/java -server -Xms500m -Xmx500m -XX:ThreadPriorityPolicy=42 -verbose:gc -XX:PermSize=128m -XX:MaxPermSize=128m -XX:+PrintGCDetails  -XX:+PrintGCTimeStamps  -XX:+UseFastAccessorMethods -XX:CMSInitiatingOccupancyFraction=80 -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:MaxTenuringThreshold=31 -XX:+DisableExplicitGC -Djava.awt.headless=true -classpath "./lib/world.jar:$CLASSPATH:.:$LIB_PATH" cyou.akworld.AKWorld $@>> stdout.log 2>&1 &
+$JAVA_HOME/bin/java -Xms1024m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m -classpath "./lib/world.jar:$CLASSPATH:.:$LIB_PATH" cyou.akworld.AKWorld $@>> world.log 2>&1 &
 
 echo $! > world.pid
-tail -f stdout.log
+tail -f world.log
 

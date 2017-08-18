@@ -29,6 +29,7 @@
 		<delete dir="${dist}/allWorld" />
 		<delete dir="${dist}/world" />
 		<delete dir="${dist}/cross" />
+		<delete dir="${dist}/asset" />
 	</target>
 
 	<target name="test">
@@ -41,5 +42,6 @@
 		<copydir dest="${dist}/world" src="${world.dir}/dist/world"></copydir>
 		<copydir dest="${dist}/allWorld" src="${allWorld.dir}/dist/allWorld"></copydir>
 		<copydir dest="${dist}/cross" src="${cross.dir}/dist/cross"></copydir>
+		<copydir dest="${dist}/asset" src="${basedir}/Game/asset"></copydir>
 	</target>
 </project>

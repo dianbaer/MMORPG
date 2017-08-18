@@ -29,8 +29,8 @@ import cyou.mrd.util.Utils;
 import cyou.mrd.world.WorldManager;
 
 public class AKWorld1 implements Runnable {
-	private static Logger log = LoggerFactory.getLogger(AKWorld.class);
-	private static AKWorld world = null;
+	private static Logger log = LoggerFactory.getLogger(AKWorld1.class);
+	private static AKWorld1 world = null;
 
 	int CYCLE_TIME = 80;
 	long preTime;
@@ -134,7 +134,7 @@ public class AKWorld1 implements Runnable {
 
 	public static void init() throws Throwable {
 		if (world == null) {
-			world = new AKWorld();
+			world = new AKWorld1();
 			world.baseInit();
 			Thread mainCycle = new Thread(world);
 			mainCycle.setName("MainCycle");

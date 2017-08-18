@@ -19,7 +19,6 @@
 	<classpathentry kind="lib" path="lib/ehcache-core-2.4.2.jar"/>
 	<classpathentry kind="lib" path="lib/ejb3-persistence.jar"/>
 	<classpathentry kind="lib" path="lib/ezmorph-1.0.3.jar"/>
-	<classpathentry kind="lib" path="lib/gm.jar"/>
 	<classpathentry kind="lib" path="lib/hibernate3.jar"/>
 	<classpathentry kind="lib" path="lib/javassist.jar"/>
 	<classpathentry kind="lib" path="lib/json-lib-2.4-jdk15.jar"/>

@@ -34,5 +34,6 @@
 	<classpathentry kind="lib" path="/ServerEngine/lib/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="/ServerEngine/lib/java_memcached-release_2.6.0.jar"/>
 	<classpathentry kind="lib" path="/ServerEngine/lib/mina-core-2.0.7.jar"/>
+	<classpathentry kind="lib" path="/ServerEngine/snslib/snsclient.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

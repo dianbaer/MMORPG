@@ -44,7 +44,7 @@
 	</pathconvert>
 
 	<target name="compileakallWorld" depends="init">
-		<javac destdir="${allWorld-build}" debug="true" source="1.5" target="1.5" encoding="UTF-8">
+		<javac destdir="${allWorld-build}" debug="true" source="1.8" target="1.8" encoding="UTF-8" includeantruntime="on">
 			<classpath>
 				<path refid="libs"/>
 

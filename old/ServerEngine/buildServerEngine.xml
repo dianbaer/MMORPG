@@ -18,7 +18,7 @@
 
 	<target name="compileserver" depends="init">
 
-		<javac destdir="${serverengine-build}" debug="true" source="1.6" target="1.6" encoding="UTF-8">
+		<javac destdir="${serverengine-build}" debug="true" source="1.8" target="1.8" encoding="UTF-8" includeantruntime="on">
 
 			<classpath>
 				<path refid="libs" />

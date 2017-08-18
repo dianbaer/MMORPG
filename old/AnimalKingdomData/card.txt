@@ -1,5 +1,0 @@
-INT	STRING	STRING	INT	FLOAT
-ID	名字	图标	对应技能ID	冷却时间
-1	技能1@:168	.//CardEffict//shandian001_tubiao.png	1	0.3
-2	技能2@:169	.//CardEffict//fire001_tubiao.png	2	25
-

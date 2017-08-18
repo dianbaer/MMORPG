@@ -112,7 +112,6 @@ public class GameServerService implements Service, EventListener ,Updatable{
 	public void login(TcpPacket packet, final ClientSession session) {
 		
 		int serverId = packet.getInt();
-		String password = packet.getString();
 		
 
 		Object[] keys = clients.keySet().toArray();

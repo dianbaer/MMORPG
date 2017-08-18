@@ -26,7 +26,9 @@
 	</target>
 
 	<target name="cleandist" description="clean up">
-		<delete dir="${dist}" />
+		<delete dir="${dist}/allWorld" />
+		<delete dir="${dist}/world" />
+		<delete dir="${dist}/cross" />
 	</target>
 
 	<target name="test">

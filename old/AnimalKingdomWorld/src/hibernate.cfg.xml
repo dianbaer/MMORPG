@@ -5,10 +5,10 @@
 <hibernate-configuration>
 
 	<session-factory>
-		<property name="connection.username">${ak_user}</property>
-		<property name="connection.url">jdbc:mysql://${ak_dburl}/${ak_database}?useUnicode=true&amp;characterEncoding=UTF8</property>
+		<property name="connection.username">root</property>
+		<property name="connection.url">jdbc:mysql://localhost/ak?useUnicode=true&amp;characterEncoding=UTF8</property>
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="connection.password">${ak_password}</property>
+		<property name="connection.password">xp</property>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
 		<property name="hibernate.c3p0.max_size">20</property>

@@ -13,8 +13,8 @@
 
 	<memcached>
 		<server>
-			<ip>${ak_memcached_servers}</ip>
-			<weights>${ak_memcached_weights}</weights>
+			<ip>127.0.0.1:11211</ip>
+			<weights>1</weights>
 		</server>
 		<initConn>5</initConn>
 		<minConn>5</minConn>

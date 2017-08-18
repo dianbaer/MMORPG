@@ -31,6 +31,9 @@
 			<fileset dir="${serverengine.dir}/lib">
 				<include name="*.jar" />
 			</fileset>
+			<fileset dir="${serverengine.dir}/snslib">
+				<include name="*.jar" />
+			</fileset>
 			<fileset dir="${serverengine.dir}/dist">
 				<include name="*.jar" />
 			</fileset>
@@ -69,6 +72,7 @@
 		<copy file="${world-dist}/world.jar" todir="${world-all}/lib" />
 		<copy file="${serverengine.dir}/dist/serverengine.jar" todir="${world-all}/lib" />
 		<copydir dest="${world-all}/lib" src="${serverengine.dir}/lib"></copydir>
+		<copydir dest="${world-all}/lib" src="${serverengine.dir}/snslib"></copydir>
 		<copy file="${world.dir}/startup.sh" todir="${world-all}" /> 
 		<copy file="${world.dir}/custom.properties" todir="${world-all}" />
 		<copy file="${world}/log4j.properties" todir="${world-all}" />

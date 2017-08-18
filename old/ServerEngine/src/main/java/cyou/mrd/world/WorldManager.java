@@ -33,7 +33,6 @@ public class WorldManager implements Updatable, Service, SingleConnectorManager 
 	private static final Logger log = LoggerFactory.getLogger(WorldManager.class);
 
 	
-	private String password;
 
 	protected SingleConnector singleConnector = new SingleConnector();
 	public IoSession ioSession;
@@ -47,7 +46,6 @@ public class WorldManager implements Updatable, Service, SingleConnectorManager 
 		Platform.getUpdater().addSyncUpdatable(this);
 		
 		
-		password = Platform.getConfiguration().getString("world.password");
 		
 		String[] urlInfo = Platform.getConfiguration().getString("world.address").split("-");
 		String[] portInfo = Platform.getConfiguration().getString("world.port").split("-");
@@ -81,7 +79,6 @@ public class WorldManager implements Updatable, Service, SingleConnectorManager 
 	public void login(IoSession session) {
 		TcpPacket pt = new TcpPacket(OpCode.WORLD_LOGIN_C);
 		pt.putInt(Platform.getConfiguration().getInt("server_id"));
-		pt.putString(password);
 		session.write(pt);
 	}
 	public void PlayerLogin(IoSession session,RequestWorld requestWorld){
@@ -122,7 +119,6 @@ public class WorldManager implements Updatable, Service, SingleConnectorManager 
 	public void againConnect(TcpPacket packet, ClientSession session) {
 		TcpPacket pt = new TcpPacket(OpCode.WORLD_LOGIN_C);
 		pt.putInt(Platform.getConfiguration().getInt("server_id"));
-		pt.putString(password);
 		session.send(pt);
 	}
 	

@@ -5,10 +5,7 @@
 	<property name="allWorld-dist" location="${allWorld.dir}/dist"/>
 	<property name="allWorld-all" location="${allWorld-dist}/allWorld"/>
  
-
-
 	<target name="dist" depends="clean,distallWorld,distAll">
-		
 	</target>
 
 	<target name="clean">
@@ -37,9 +34,6 @@
 			<fileset dir="${serverengine.dir}/dist">
 				<include name="*.jar" />
 			</fileset>
-			<fileset dir="${server-animalkingdom.dir}/dist">
-				<include name="*.jar" />
-			</fileset>
 		</path>
 	</pathconvert>
 
@@ -47,7 +41,6 @@
 		<javac destdir="${allWorld-build}" debug="true" source="1.8" target="1.8" encoding="UTF-8" includeantruntime="on">
 			<classpath>
 				<path refid="libs"/>
-
 			</classpath>
 			<src path="${allWorld}"/>
 		</javac>
@@ -56,20 +49,8 @@
 	<target name="distallWorld" depends="compileakallWorld">
 		<mkdir dir="${allWorld-dist}"/>
 		<jar destfile="${allWorld-dist}/allWorld.jar">
-			<!--<fileset dir="${allWorld-build}">
-				<include name="**/cyou/**"/>
-			</fileset>-->
 			<fileset dir="${allWorld-build}">
 				<include name="**/**"/>
-			</fileset>
-			<fileset dir="${allWorld}">
-				<include name="**/*.xml"/>
-			</fileset>
-			<fileset dir="${allWorld.dir}">
-				<include name="*.txt"/>
-				<!--
-				<include name="custom.properties"/>
-				-->
 			</fileset>
 			<manifest>
 				<attribute name="Build-by" value="${user.name}"/>
@@ -77,7 +58,6 @@
 				<attribute name="Class-Path" value="${libs.project}"/>
 			</manifest>
 		</jar>
-
 	</target>
 
 	<target name="distAll">
@@ -85,15 +65,9 @@
 		<mkdir dir="${allWorld-all}/lib"/>
 		<copy file="${allWorld-dist}/allWorld.jar" todir="${allWorld-all}/lib" />
 		<copy file="${serverengine.dir}/dist/serverengine.jar" todir="${allWorld-all}/lib" />
-		<copy file="${server-animalkingdom.dir}/dist/animalkingdomserver.jar" todir="${allWorld-all}/lib" />
-		<copydir dest="${allWorld-all}/lib1" src="${serverengine.dir}/lib"></copydir>
-		<copy file="${allWorld.dir}/kworld" todir="${allWorld-all}" />
+		<copydir dest="${allWorld-all}/lib" src="${serverengine.dir}/lib"></copydir>
 		<copy file="${allWorld.dir}/startup.sh" todir="${allWorld-all}" /> 
 		<copy file="${allWorld.dir}/custom.properties" todir="${allWorld-all}" />
-		<copy file="${allWorld.dir}/serial.txt" todir="${allWorld-all}" />
-		<copy file="${allWorld.dir}/client.txt" todir="${allWorld-all}" />
 		<copy file="${allWorld}/log4j.properties" todir="${allWorld-all}" />
 	</target>
-
-
 </project>

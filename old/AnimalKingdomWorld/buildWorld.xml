@@ -5,10 +5,7 @@
 	<property name="world-dist" location="${world.dir}/dist"/>
 	<property name="world-all" location="${world-dist}/world"/>
  
-
-
 	<target name="dist" depends="clean,distworld,distAll">
-		
 	</target>
 
 	<target name="clean">
@@ -20,7 +17,7 @@
 		<mkdir dir="${world-build}"/>
 		<mkdir dir="${world-dist}"/>
 	</target>
-
+	
 	<pathconvert property="libs.project">
 		<mapper>
 			<chainedmapper>
@@ -37,9 +34,6 @@
 			<fileset dir="${serverengine.dir}/dist">
 				<include name="*.jar" />
 			</fileset>
-			<fileset dir="${server-animalkingdom.dir}/dist">
-				<include name="*.jar" />
-			</fileset>
 		</path>
 	</pathconvert>
 
@@ -47,7 +41,6 @@
 		<javac destdir="${world-build}" debug="true" source="1.8" target="1.8" encoding="UTF-8" includeantruntime="on">
 			<classpath>
 				<path refid="libs"/>
-
 			</classpath>
 			<src path="${world}"/>
 		</javac>
@@ -56,20 +49,8 @@
 	<target name="distworld" depends="compileakworld">
 		<mkdir dir="${world-dist}"/>
 		<jar destfile="${world-dist}/world.jar">
-			<!--<fileset dir="${world-build}">
-				<include name="**/cyou/**"/>
-			</fileset>-->
 			<fileset dir="${world-build}">
 				<include name="**/**"/>
-			</fileset>
-			<fileset dir="${world}">
-				<include name="**/*.xml"/>
-			</fileset>
-			<fileset dir="${world.dir}">
-				<include name="*.txt"/>
-				<!--
-				<include name="custom.properties"/>
-				-->
 			</fileset>
 			<manifest>
 				<attribute name="Build-by" value="${user.name}"/>
@@ -77,23 +58,16 @@
 				<attribute name="Class-Path" value="${libs.project}"/>
 			</manifest>
 		</jar>
-
 	</target>
-
+	
 	<target name="distAll">
 		<mkdir dir="${world-all}"/>
 		<mkdir dir="${world-all}/lib"/>
 		<copy file="${world-dist}/world.jar" todir="${world-all}/lib" />
 		<copy file="${serverengine.dir}/dist/serverengine.jar" todir="${world-all}/lib" />
-		<copy file="${server-animalkingdom.dir}/dist/animalkingdomserver.jar" todir="${world-all}/lib" />
-		<copydir dest="${world-all}/lib1" src="${serverengine.dir}/lib"></copydir>
-		<copy file="${world.dir}/kworld" todir="${world-all}" />
+		<copydir dest="${world-all}/lib" src="${serverengine.dir}/lib"></copydir>
 		<copy file="${world.dir}/startup.sh" todir="${world-all}" /> 
 		<copy file="${world.dir}/custom.properties" todir="${world-all}" />
-		<copy file="${world.dir}/serial.txt" todir="${world-all}" />
-		<copy file="${world.dir}/client.txt" todir="${world-all}" />
 		<copy file="${world}/log4j.properties" todir="${world-all}" />
 	</target>
-
-
 </project>

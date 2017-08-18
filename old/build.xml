@@ -1,73 +1,43 @@
 ﻿<?xml version="1.0"?>
 <project name="animalkingdom" basedir="." default="test">
-	<property file="build-custom.properties"/>
-
-	<property name="build" location="${buildpath}" />
-	<property name="dist" location="${destpath}/${v}" />
-
-	<property name="serverengine.dir" value="${ServerEngineDir}" />
-	<property name="server-animalkingdom.dir" value="${AnimalKingdomServerDir}" />
-	<property name="world.dir" value="${WorldDir}" />
-	<property name="allWorld.dir" value="${AllWorldDir}" />
-	<property name="cross.dir" value="${crossDir}" />
-	<property name="server-data.dir" value="${dataDir}" />
+	<property name="dist" location="${basedir}/dist" />
+	<property name="serverengine.dir" value="${basedir}/ServerEngine" />
+	<property name="world.dir" value="${basedir}/AnimalKingdomWorld" />
+	<property name="allWorld.dir" value="${basedir}/World" />
+	<property name="cross.dir" value="${basedir}/Crossdomain" />
 
  
 	<target name="build-serverengine" depends="">
 		<ant antfile="buildserverengine.xml" dir="${serverengine.dir}">
-			<property file="custom.properties" />
 		</ant>
 	</target>
 
 	<target name="build-world" depends="">
 		<ant antfile="buildWorld.xml" dir="${world.dir}">
-			<property file="build-custom.properties" />
 		</ant>
 	</target>
 	<target name="build-allWorld" depends="">
 		<ant antfile="buildWorld.xml" dir="${allWorld.dir}">
-			<property file="build-custom.properties" />
 		</ant>
 	</target>
 	<target name="build-cross" depends="">
 		<ant antfile="buildCross.xml" dir="${cross.dir}">
-			<property file="build-custom.properties" />
 		</ant>
-	</target>
-	
-	<target name="build-animalkingdomserver" depends="">
-		<ant antfile="build-animalkingdomserver.xml" dir="${server-animalkingdom.dir}">
-			<property file="build-custom.properties" />
-		</ant>
-	</target>
-	<target name="7z" depends="">
-		<exec executable="${7z}">
-			<!-- x表示排除哪些文件，r表示递归子目录 -->
-			<arg line="a ${destpath}/data.zip ${data.dir} -xr!*etd* -xr!*svn* -xr!*CVS*" />
-		</exec>
 	</target>
 
 	<target name="cleandist" description="clean up">
-		<delete file="${dist}" />
+		<delete dir="${dist}" />
 	</target>
 
 	<target name="test">
 		<antcall target="cleandist" />
 		<antcall target="build-serverengine" />
-		<antcall target="build-animalkingdomserver" />
 		<antcall target="build-world" />
 		<antcall target="build-allWorld" />
 		<antcall target="build-cross" />
-		<!--<antcall target="7z" />-->
 		<mkdir dir="${dist}" />
-		<copy file="${server-animalkingdom.dir}/dist/AK.war" todir="${dist}" />
-		<copy file="${server-animalkingdom.dir}/ak.sql" todir="${dist}" /> 
 		<copydir dest="${dist}/world" src="${world.dir}/dist/world"></copydir>
 		<copydir dest="${dist}/allWorld" src="${allWorld.dir}/dist/allWorld"></copydir>
 		<copydir dest="${dist}/cross" src="${cross.dir}/dist/cross"></copydir>
-		<copydir dest="${dist}/AnimalKingdomData" src="${server-animalkingdom.dir}/../AnimalKingdomData"></copydir>
-		<copydir dest="${dist}/resource" src="${server-animalkingdom.dir}/resource"></copydir>
-		<copy file="${server-animalkingdom.dir}/../update.txt" todir="${dist}" />	
-		<echo file="${destpath}/NewVersion.txt" >${v}</echo>
 	</target>
 </project>

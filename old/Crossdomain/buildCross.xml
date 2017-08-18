@@ -5,10 +5,7 @@
 	<property name="cross-dist" location="${cross.dir}/dist"/>
 	<property name="cross-all" location="${cross-dist}/cross"/>
  
-
-
 	<target name="dist" depends="clean,distcross,distAll">
-		
 	</target>
 
 	<target name="clean">
@@ -41,7 +38,6 @@
 		<javac destdir="${cross-build}" debug="true" source="1.8" target="1.8" encoding="UTF-8" includeantruntime="on">
 			<classpath>
 				<path refid="libs"/>
-
 			</classpath>
 			<src path="${cross}"/>
 		</javac>
@@ -50,9 +46,6 @@
 	<target name="distcross" depends="compileakcross">
 		<mkdir dir="${cross-dist}"/>
 		<jar destfile="${cross-dist}/cross.jar">
-			<!--<fileset dir="${cross-build}">
-				<include name="**/cyou/**"/>
-			</fileset>-->
 			<fileset dir="${cross-build}">
 				<include name="**/**"/>
 			</fileset>
@@ -69,9 +62,7 @@
 		<mkdir dir="${cross-all}"/>
 		<mkdir dir="${cross-all}/lib"/>
 		<copy file="${cross-dist}/cross.jar" todir="${cross-all}/lib" />
-		<copydir dest="${cross-all}/lib1" src="${cross.dir}/lib"></copydir>
+		<copydir dest="${cross-all}/lib" src="${cross.dir}/lib"></copydir>
 		<copy file="${cross.dir}/startup.sh" todir="${cross-all}" /> 
 	</target>
-
-
 </project>

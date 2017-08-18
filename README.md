@@ -4,7 +4,7 @@
 
 threecss-mmorpg是基于ThreeCSS分布式框架开发的一款通用型的MMORPG项目
 
-体验地址：http://mmorpg.threecss.com/Game1.html
+体验地址：https://mmorpg.threecss.com
 
 目前old文件夹含有mmorpg所有战斗、场景、技能、ai、广播等核心代码。
 

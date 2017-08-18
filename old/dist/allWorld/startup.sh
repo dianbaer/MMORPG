@@ -16,7 +16,7 @@ LIB_PATH=$LIB_PATH:./lib/slf4j-api-1.6.1.jar:./lib/slf4j-log4j12-1.6.1.jar:./lib
 LIB_PATH=$LIB_PATH:./lib/commons-primitives-1.0.jar:./lib/ehcache-core-2.4.2.jar:./lib/snsclient.jar
 LIB_PATH=$LIB_PATH:./lib/serverengine.jar:./lib/javassist.jar:./lib/java_memcached-release_2.6.0.jar
 
-$JAVA_HOME/bin/java -Xms1024m -Xmx2048m -classpath "./lib/allWorld.jar:$CLASSPATH:.:$LIB_PATH" cyou.akworld.World $@>> allWorld.log 2>&1 &
+$JAVA_HOME/bin/java -Xms512m -Xmx1024m -classpath "./lib/allWorld.jar:$CLASSPATH:.:$LIB_PATH" cyou.akworld.World $@>> allWorld.log 2>&1 &
 
 echo $! > allWorld.pid
 tail -f allWorld.log

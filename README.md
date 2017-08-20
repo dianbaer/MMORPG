@@ -1,5 +1,6 @@
 # threecss-mmorpg
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/30998ad031bb430c8a9dd6246e30c689)](https://www.codacy.com/app/232365732/threecss-mmorpg?utm_source=github.com&utm_medium=referral&utm_content=dianbaer/threecss-mmorpg&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/dianbaer/threecss-mmorpg.svg?branch=master)](https://travis-ci.org/dianbaer/threecss-mmorpg)
 
 threecss-mmorpg是基于ThreeCSS分布式框架开发的一款通用型的MMORPG项目

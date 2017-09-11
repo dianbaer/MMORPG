@@ -24,12 +24,12 @@
 		<link>
 			<name>[source path] GUI-src</name>
 			<type>2</type>
-			<location>C:/Users/xuepeng/Desktop/server/压力测试客户端/GUI/src</location>
+			<location>C:/Users/admin/Desktop/github/threecss-mmorpg/trunk/old/GUI/src</location>
 		</link>
 		<link>
 			<name>[source path] Game-src</name>
 			<type>2</type>
-			<location>C:/Users/xuepeng/Desktop/server/压力测试客户端/Game/src</location>
+			<location>C:/Users/admin/Desktop/github/threecss-mmorpg/trunk/old/Game/src</location>
 		</link>
 	</linkedResources>
 </projectDescription>

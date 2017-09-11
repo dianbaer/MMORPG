@@ -93,7 +93,7 @@ package
 		private function onAddedToStage(event:Event):void{
 			removeEventListener(Event.ADDED_TO_STAGE,onAddedToStage);
 			App.init( this );
-			ResourceManager.resourcePrefixURL = "C:/Users/xuepeng/Desktop/asset/";
+			ResourceManager.resourcePrefixURL = "C:/Users/admin/Desktop/github/threecss-mmorpg/trunk/old/Game/asset/";
 			TweenManager.initClass();
 			
 			App.loader.loadList(["scene.json","monster.json"],loadJsonComplete);
@@ -191,7 +191,7 @@ package
 		}
 		public function onKeyUp(event:KeyboardEvent):void{
 			if(event.keyCode == Keyboard.W){
-				var file:File = new File("C:/Users/Administrator/Desktop/"+id+".json");    
+				var file:File = new File("C:/Users/admin/Desktop/github/threecss-mmorpg/trunk/old/Game/asset/"+id+".json");    
 				var stream:FileStream = new FileStream();
 				stream.open(file,FileMode.WRITE);
 				stream.addEventListener(IOErrorEvent.IO_ERROR,writeIOErrorHandler);

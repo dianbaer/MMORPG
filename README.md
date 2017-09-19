@@ -3,13 +3,13 @@
 [![Build Status](https://travis-ci.org/dianbaer/threecss-mmorpg.svg?branch=master)](https://travis-ci.org/dianbaer/threecss-mmorpg)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/30998ad031bb430c8a9dd6246e30c689)](https://www.codacy.com/app/232365732/threecss-mmorpg?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dianbaer/threecss-mmorpg&amp;utm_campaign=Badge_Grade)
 
-threecss-mmorpg是基于ThreeCSS分布式框架开发的一款通用型的MMORPG项目
+# threecss-mmorpg是基于ThreeCSS分布式框架开发的一款通用型的MMORPG项目
 
-体验地址：https://mmorpg.threecss.com
+>体验地址：https://mmorpg.threecss.com
 
 目前old文件夹含有mmorpg所有战斗、场景、技能、ai、广播等核心代码。
 
-打版本
+## 打版本
 
 	服务器：
 
@@ -18,11 +18,21 @@ threecss-mmorpg是基于ThreeCSS分布式框架开发的一款通用型的MMORPG
 	客户端：
 	
 		使用flash builder发布网页版或手机Android版
+		
+## 推荐环境：
+
+>快捷部署 https://github.com/dianbaer/deployment-server
+
+	jdk-8u121
+
+	apache-tomcat-8.5.12
+
+	CentOS-7-1611
 
 	
-发布项目：
+## 发布项目：
 	
-一、服务器：
+>一、服务器：
 
 	1、将dist/asset考入服务器，例如：
 	
@@ -50,7 +60,7 @@ threecss-mmorpg是基于ThreeCSS分布式框架开发的一款通用型的MMORPG
 		
 		执行./start.sh
 	
-二、客户端
+>二、客户端
 
 	1、将dist/asset与dist/webgame考入web容器（httpd、nginx等），例如
 	

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cyou.mrd.game.relation">
+	<class name="PlayerRelation" table="friends">
+		<id name="id" column="player_id">
+			<generator class="assigned" />
+		</id>
+		<property name="friends" column="friends" type="cyou.mrd.game.relation.RelationListUserType" />
+	</class>
+
+</hibernate-mapping>

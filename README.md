@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/dianbaer/threecss-mmorpg.svg?branch=master)](https://travis-ci.org/dianbaer/threecss-mmorpg)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/30998ad031bb430c8a9dd6246e30c689)](https://www.codacy.com/app/232365732/threecss-mmorpg?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dianbaer/threecss-mmorpg&amp;utm_campaign=Badge_Grade)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 # threecss-mmorpg是基于ThreeCSS分布式框架开发的一款通用型的MMORPG项目
 
@@ -9,7 +10,7 @@
 
 ## 简介（大家通过学习，可以理解mmorpg的核心思路）
 
->1、目前old文件夹含有mmorpg所有战斗、场景、技能、ai、广播等核心代码。
+>1、含有mmorpg所有战斗、场景、技能、ai、广播等核心代码。
 
 >2、服务器有很高的稳定性、安全性、效率、承载量，借鉴了天龙服务器的技术架构。魔兽世界的体验和交互设计思路，服务器拥有完整的客户端逻辑，对网络延迟处理的非常优秀，在外网服务器运行半年多的时间。
 

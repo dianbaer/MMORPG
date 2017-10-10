@@ -1,6 +1,6 @@
 # threecss-mmorpg
 
-[![Build Status](https://travis-ci.org/dianbaer/threecss-mmorpg.svg?branch=master)](https://travis-ci.org/dianbaer/threecss-mmorpg)
+[![Build Status](https://travis-ci.org/dianbaer/MMORPG.svg?branch=master)](https://travis-ci.org/dianbaer/MMORPG)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/30998ad031bb430c8a9dd6246e30c689)](https://www.codacy.com/app/232365732/threecss-mmorpg?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dianbaer/threecss-mmorpg&amp;utm_campaign=Badge_Grade)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 

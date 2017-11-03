@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 
-# MMORPG是一个通用型的MMORPG项目
+# MMORPG是一个可以用来学习ARPG核心战斗的项目
 
 ### 答疑、问题反馈QQ群：537982451
 

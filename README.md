@@ -7,7 +7,7 @@
 
 # MMORPG是一个可以用来学习ARPG核心战斗的项目
 
-## github 互star 互赞，及此项目问题反馈与答疑QQ群：537982451
+## 此项目问题反馈与答疑QQ群：537982451
 
 >体验地址：https://mmorpg.threecss.com
 

@@ -8,7 +8,6 @@
 # MMORPG是一个可以用来学习ARPG核心战斗的项目
 
 
->体验地址：https://mmorpg.threecss.com
 
 ## 简介（大家通过学习，可以理解mmorpg的核心思路）
 

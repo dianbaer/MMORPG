@@ -7,6 +7,9 @@
 
 # MMORPG是一个可以用来学习ARPG核心战斗的项目
 
+## 视频地址：
+
+http://v.youku.com/v_show/id_XOTE5NDg1MTg0.html?firsttime=0
 
 
 ## 简介（大家通过学习，可以理解mmorpg的核心思路）

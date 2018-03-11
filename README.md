@@ -10,6 +10,10 @@
 
 http://v.youku.com/v_show/id_XOTE5NDg1MTg0.html?firsttime=0
 
+## 体验地址
+
+https://www.dianbaer.com/Game/Game1.html
+
 
 ## 简介（大家通过学习，可以理解mmorpg的核心思路）
 

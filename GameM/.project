@@ -26,12 +26,12 @@
 		<link>
 			<name>[source path] GUI-src</name>
 			<type>2</type>
-			<location>D:/github/threecss-mmorpg/trunk/GUI/src</location>
+			<location>D:/github/product/MMORPG/GUI/src</location>
 		</link>
 		<link>
 			<name>[source path] Game-src</name>
 			<type>2</type>
-			<location>D:/github/threecss-mmorpg/trunk/Game/src</location>
+			<location>D:/github/product/MMORPG/Game/src</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -18,7 +18,7 @@ package UI.abstract.resources
 	public class ResourceManager
 	{
 		/** 资源URL前缀 **/
-		public static var resourcePrefixURL : String = "D:\\github\\product\\MMORPG\\Game\\asset\\";
+		public static var resourcePrefixURL : String = "asset/";
 
 		/** 队列加载器 **/
 		private var loaderQueue : QueueLoader;

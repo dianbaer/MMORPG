@@ -1,4 +1,4 @@
-#!/bin/sh
+
 
 cd /home/cross
 DATESTR=`date +%Y%m%d`
